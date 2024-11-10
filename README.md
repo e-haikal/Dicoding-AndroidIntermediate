@@ -6,10 +6,8 @@ Record Project Belajar Pengembangan Aplikasi Android Intermediate from [Dicoding
 
 ## Screenshots Submission
 ### StoryApp (First Submission)
-![MyImage](DicodingEvent/screenshots/DicodingEvent.jpg)
 
 ### StoryAppFinal (Final Submission)
-![DicodingEventFinal](DicodingEventFinal/screenshots/DicodingEventFinal.jpg)
 
 ## Features
 ### StoryApp Submission Checklists
