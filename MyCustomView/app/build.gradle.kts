@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.siaptekno.mycustomview"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.siaptekno.mycustomview"
