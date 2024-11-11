@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.siaptekno.mywidgets"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.siaptekno.mywidgets"
@@ -32,6 +32,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
 
