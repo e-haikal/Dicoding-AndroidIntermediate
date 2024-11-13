@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        webView.loadUrl("https://www.dicoding.com")
+        webView.loadUrl("https://www.asmanhaikal.com")
 
     }
 }
