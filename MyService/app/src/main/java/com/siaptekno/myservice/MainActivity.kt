@@ -1,6 +1,7 @@
 package com.siaptekno.myservice
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize the service intent
         val serviceIntent = Intent(this, MyBackgroundService::class.java)
+        val foregroundServiceIntent = Intent(this, MyForegroundService::class.java)
 
         // Set up button click listeners to start and stop the service
         binding.btnStartBackgroundService.setOnClickListener {
@@ -27,5 +29,18 @@ class MainActivity : AppCompatActivity() {
         binding.btnStopBackgroundService.setOnClickListener {
             stopService(serviceIntent)
         }
+
+        // Set up button click listeners to start and stop the foreground service
+        binding.btnStartForegroundService.setOnClickListener {
+            if (Build.VERSION.SDK_INT >= 26) {
+                startForegroundService(foregroundServiceIntent)
+            } else {
+                startService(foregroundServiceIntent)
+            }
+        }
+        binding.btnStopForegroundService.setOnClickListener {
+            stopService(foregroundServiceIntent)
+        }
+
     }
 }
