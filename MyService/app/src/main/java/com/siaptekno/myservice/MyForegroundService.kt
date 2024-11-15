@@ -7,11 +7,13 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ServiceInfo
 import android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -39,7 +41,14 @@ class MyForegroundService : Service() {
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         val notification = buildNotification()
-        startForeground(NOTIFICATION_ID, notification)
+
+//        startForeground(NOTIFICATION_ID, notification)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE)
+        } else {
+            startForeground(NOTIFICATION_ID, notification)
+        }
 
         Log.d(TAG, "Service dijalankan...")
         serviceScope.launch {
@@ -81,6 +90,12 @@ class MyForegroundService : Service() {
             .setContentText("Saat ini foreground service sedang berjalan.")
             .setSmallIcon(R.mipmap.ic_launcher)
             .setContentIntent(pendingIntent)
+
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+            notificationBuilder.setForegroundServiceBehavior(FOREGROUND_SERVICE_IMMEDIATE)
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
