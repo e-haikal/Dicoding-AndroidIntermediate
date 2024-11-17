@@ -37,6 +37,7 @@
         android:layout_margin="16dp"
         android:contentDescription="@string/add_story"
         app:srcCompat="@drawable/round_add_24"
+        app:tint="@color/white"
         android:backgroundTint="?attr/colorPrimary"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
