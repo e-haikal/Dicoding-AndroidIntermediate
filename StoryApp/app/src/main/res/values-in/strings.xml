@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DicodingStory</string>
-    <string name="welcome">Selamat Datang di DicodingStory</string>
-    <string name="description_welcome">Bagikan ceritamu, temukan kisah menarik di sekitarmu. Ayo mulai bercerita!</string>
-    <string name="started">Mulai Bercerita</string>
-    <string name="msg_login">Bagikan ceritamu dengam mudah</string>
+    <string name="app_name">StoryApp</string>
+    <string name="welcome">Nikmati berbagai macam cerita</string>
+    <string name="description_welcome">Jelajahi kisah dari peserta Dicoding. Baik itu tantangan coding atau perjalanan pribadi dalam bidang teknologi, selalu ada sesuatu yang dapat menginspirasi Anda.</string>
+    <string name="started">Mulai Sekarang!</string>
+    <string name="msg_login">Selamat Datang Kembali</string>
+    <string name="msg_description">Masuk ke akun kamu.</string>
+    <string name="msg_register_title">Daftar</string>
+    <string name="msg_register_description">Buat akun kamu</string>
+
+
+
     <string name="email">Email</string>
     <string name="hint_email">Masukkan email kamu</string>
     <string name="password">Kata Sandi</string>

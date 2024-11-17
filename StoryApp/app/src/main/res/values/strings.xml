@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">StoryApp</string>
     <string name="welcome">Enjoy a wide range of stories</string>
-    <string name="description_welcome">Explore a diverse range of stories. Whether it is a coding challenge or a personal journey in tech, theres always something to inspire you.</string>
+    <string name="description_welcome">Explore stories from Dicoding participants. Whether its a coding challenge or a personal journey in tech, theres always something to inspire you.</string>
     <string name="started">Start Now!</string>
     <string name="msg_login">Welcome Back</string>
     <string name="msg_description">Login to your account.</string>

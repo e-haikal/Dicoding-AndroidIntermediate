@@ -15,7 +15,7 @@
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_margin="8dp"
-        android:src="@drawable/img_login"
+        android:src="@drawable/img_register"
         android:alpha="0"
         tools:alpha="100"
         android:contentDescription="@string/image_login" />
