@@ -2,25 +2,28 @@ package com.siaptekno.storyapp.data.remote.response
 
 import com.google.gson.annotations.SerializedName
 
-data class LoginResponse (
+// Represents the response for a login request.
+data class LoginResponse(
+
     @field:SerializedName("loginResult")
-    val loginResult: LoginResult,
+    val loginResult: LoginResult, // Contains user information after a successful login.
 
     @field:SerializedName("error")
-    val error: Boolean,
+    val error: Boolean, // Indicates if there was an error during login.
 
     @field:SerializedName("message")
-    val message: String
+    val message: String // A descriptive message about the login status.
 )
 
-
+// Represents the details of a successful login result.
 data class LoginResult(
+
     @field:SerializedName("name")
-    val name: String,
+    val name: String, // The user's name.
 
     @field:SerializedName("userId")
-    val userId: String,
+    val userId: String, // The user's unique ID.
 
     @field:SerializedName("token")
-    val token: String
+    val token: String // Authentication token for the user.
 )
