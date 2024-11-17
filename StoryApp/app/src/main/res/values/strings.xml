@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">StoryApp</string>
+    <string name="welcome">Welcome to DicodingStory</string>
+    <string name="description_welcome">Share your story, discover fascinating tales around you. Let’s start telling stories!</string>
+    <string name="started">Start Telling Stories</string>
+    <string name="msg_login">Hey there! Just one step away. Please log in to start exploring!</string>
+    <string name="email">Email</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="password">Password</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="btn_login">Login</string>
+    <string name="new_here">New here? Let’s get you set up!</string>
+    <string name="register_message">Create an account to get started!</string>
+    <string name="name">Name</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account_login_here">Already have an account? Login here.</string>
+    <string name="password_validation">Password must be more than 8 characters</string>
+    <string name="email_validation">Invalid email format</string>
+    <string name="empty_name">Name cannot be empty</string>
+    <string name="empty_email">Email cannot be empty</string>
+    <string name="empty_password">Password cannot be empty</string>
+    <string name="add_story">add story</string>
+    <string name="upload">Upload</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="no_media_selected">No media selected</string>
+    <string name="please_add_description">Please add description</string>
+    <string name="please_upload_an_image">Please upload an image</string>
+    <string name="confirm_logout">Confirm Logout</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="image_story">image_story</string>
+    <string name="description">description</string>
+    <string name="image_login">image_login</string>
+    <string name="image_welcome">image_welcome</string>
+    <string name="logout">Logout</string>
+    <string name="change_language">change_language</string>
+    <string name="upload_story">Upload Story</string>
+    <string name="detail_page">Detail Page</string>
+    <string name="retry">retry</string>
+
+
 </resources>

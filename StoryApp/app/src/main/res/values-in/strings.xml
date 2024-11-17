@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DicodingStory</string>
+    <string name="welcome">Selamat Datang di DicodingStory</string>
+    <string name="description_welcome">Bagikan ceritamu, temukan kisah menarik di sekitarmu. Ayo mulai bercerita!</string>
+    <string name="started">Mulai Bercerita</string>
+    <string name="msg_login">Halo! Tinggal selangkah lagi. Silakan masuk untuk mulai menjelajah!</string>
+    <string name="email">Email</string>
+    <string name="hint_email">Masukkan email kamu</string>
+    <string name="password">Kata Sandi</string>
+    <string name="hint_password">Masukkan kata sandi kamu</string>
+    <string name="btn_login">Masuk</string>
+    <string name="new_here">Baru di sini? Mari kita mulai!</string>
+    <string name="register_message">Buat akun untuk memulai!</string>
+    <string name="name">Nama</string>
+    <string name="name_hint">Masukkan nama kamu</string>
+    <string name="register">Daftar</string>
+    <string name="already_have_an_account_login_here">Sudah punya akun? Masuk di sini.</string>
+    <string name="password_validation">Kata sandi harus lebih dari 8 karakter</string>
+    <string name="email_validation">Format email tidak valid</string>
+    <string name="empty_name">Nama tidak boleh kosong</string>
+    <string name="empty_email">Email tidak boleh kosong</string>
+    <string name="empty_password">Kata sandi tidak boleh kosong</string>
+    <string name="add_story">Tambah cerita</string>
+    <string name="upload">Unggah</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="no_media_selected">Tidak ada media yang dipilih</string>
+    <string name="please_add_description">Tambahkan deskripsi</string>
+    <string name="please_upload_an_image">Unggah gambar</string>
+    <string name="confirm_logout">Konfirmasi Keluar</string>
+    <string name="are_you_sure_you_want_to_logout">Apakah kamu yakin ingin keluar?</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="image_story">gambar_cerita</string>
+    <string name="description">deskripsi</string>
+    <string name="image_login">gambar_login</string>
+    <string name="image_welcome">gambar_selamat_datang</string>
+    <string name="logout">Keluar</string>
+    <string name="change_language">ubah_bahasa</string>
+    <string name="upload_story">Unggah Cerita</string>
+    <string name="detail_page">Halaman Detail</string>
+    <string name="retry">coba lagi</string>
+
+</resources>
