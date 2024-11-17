@@ -10,13 +10,25 @@ import kotlinx.coroutines.launch
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 
-class AddStoryViewModel(private val repository: Repository): ViewModel() {
+// ViewModel to manage data for adding a story
+class AddStoryViewModel(private val repository: Repository) : ViewModel() {
+
+    // LiveData to observe loading state
     private val _isLoading = MutableLiveData<Boolean>()
     var isLoading: MutableLiveData<Boolean> = _isLoading
 
+    // LiveData to observe upload result
     private val _uploadResult = MutableLiveData<Result<AddStoryResponse>>()
     var uploadResult: MutableLiveData<Result<AddStoryResponse>> = _uploadResult
 
+    /**
+     * Upload a story to the server.
+     * @param token Authentication token
+     * @param description Story description as RequestBody
+     * @param photo Story image as MultipartBody.Part
+     * @param lat Optional latitude for the story
+     * @param lon Optional longitude for the story
+     */
     fun uploadStory(
         token: String,
         description: RequestBody,
@@ -24,11 +36,11 @@ class AddStoryViewModel(private val repository: Repository): ViewModel() {
         lat: RequestBody?,
         lon: RequestBody?
     ) {
-        _isLoading.value = true
+        _isLoading.value = true // Show loading indicator
         viewModelScope.launch {
             val result = repository.addStory(token, description, photo, lat, lon)
-            _uploadResult.value = result
-            _isLoading.value = false
+            _uploadResult.value = result // Update upload result LiveData
+            _isLoading.value = false // Hide loading indicator
         }
     }
 }

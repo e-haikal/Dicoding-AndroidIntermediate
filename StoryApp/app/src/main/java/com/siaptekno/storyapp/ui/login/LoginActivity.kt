@@ -20,35 +20,46 @@ import com.siaptekno.storyapp.data.Result
 import com.siaptekno.storyapp.ui.main.MainActivity
 import com.siaptekno.storyapp.ui.register.RegisterActivity
 
-
+// LoginActivity handles the user interface for login functionality.
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var sessionManager: SessionManager
 
+    // Using ViewModelProvider to get an instance of LoginViewModel.
     private val loginViewModel: LoginViewModel by viewModels {
-        LoginFactory.getInstance(this)
+        LoginFactory.getInstance(this) // Factory provides dependency injection
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdge() // Enables edge-to-edge UI design
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        sessionManager = SessionManager(this)
+        sessionManager = SessionManager(this) // SessionManager for managing user sessions
 
+        // Adjusts layout for proper display of system bars.
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        playAnimation()
+        playAnimation() // Animations for UI elements
+        setupClickListeners() // Sets up UI event listeners
+        observeViewModel() // Observes ViewModel LiveData for updates
+    }
+
+    private fun setupClickListeners() {
+        // Navigates to Register screen.
         binding.toRegister.setOnClickListener {
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(intent)
             finish()
         }
+
+        // Validates input and triggers login process.
         binding.btnLogin.setOnClickListener {
             val email = binding.edLoginEmail.text.toString().trim()
             val password = binding.edLoginPassword.text.toString().trim()
@@ -57,29 +68,26 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.login(email, password)
             }
         }
-
-        observeViewModel()
     }
 
     private fun observeViewModel() {
+        // Observes loading state and toggles progress bar visibility.
         loginViewModel.isLoading.observe(this) { isLoading ->
             showLoading(isLoading)
         }
 
+        // Observes login result and handles success or error scenarios.
         loginViewModel.loginResult.observe(this) { result ->
-            when(result) {
-                is Result.Loading -> {
-                    showLoading(true)
-                }
+            when (result) {
+                is Result.Loading -> showLoading(true)
                 is Result.Success -> {
                     showLoading(false)
                     val token = result.data.loginResult.token
                     lifecycleScope.launch {
-                        sessionManager.saveAuthToken(token)
+                        sessionManager.saveAuthToken(token) // Saves auth token in session
                     }
                     Toast.makeText(this, result.data.message, Toast.LENGTH_SHORT).show()
-
-                    navigateToMainActivity()
+                    navigateToMainActivity() // Redirects to MainActivity
                 }
                 is Result.Error -> {
                     showLoading(false)
@@ -92,14 +100,14 @@ class LoginActivity : AppCompatActivity() {
     private fun navigateToMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
-        finish()
+        finish() // Ends current activity to remove it from the back stack
     }
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-
     }
 
+    // Validates user input for email and password.
     private fun isInputValid(email: String, password: String): Boolean {
         var isValid = true
         if (email.isEmpty()) {
@@ -119,6 +127,7 @@ class LoginActivity : AppCompatActivity() {
         return isValid
     }
 
+    // Plays sequential animations for login screen elements.
     private fun playAnimation() {
         val img = ObjectAnimator.ofFloat(binding.imgLogin, View.ALPHA, 1f).setDuration(1000)
         val title = ObjectAnimator.ofFloat(binding.msgLoginTitle, View.ALPHA, 1f).setDuration(1000)
@@ -148,7 +157,4 @@ class LoginActivity : AppCompatActivity() {
             start()
         }
     }
-
-
-
 }

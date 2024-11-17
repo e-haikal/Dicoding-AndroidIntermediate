@@ -6,8 +6,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.siaptekno.storyapp.data.remote.Repository
 import com.siaptekno.storyapp.di.Injection
 
+// Factory class to provide AddStoryViewModel instances
+class AddStoryFactory(private val repository: Repository) : ViewModelProvider.NewInstanceFactory() {
 
-class AddStoryFactory(private val repository: Repository): ViewModelProvider.NewInstanceFactory() {
+    // Create an instance of AddStoryViewModel
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(AddStoryViewModel::class.java)) {
@@ -19,6 +21,11 @@ class AddStoryFactory(private val repository: Repository): ViewModelProvider.New
     companion object {
         @Volatile
         private var INSTANCE: AddStoryFactory? = null
+
+        /**
+         * Get the singleton instance of AddStoryFactory.
+         * @param context Application context for creating dependencies
+         */
         fun getInstance(context: Context): AddStoryFactory =
             INSTANCE ?: synchronized(this) {
                 INSTANCE ?: AddStoryFactory(
