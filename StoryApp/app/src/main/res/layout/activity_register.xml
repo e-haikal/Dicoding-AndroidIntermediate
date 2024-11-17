@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow"
     android:orientation="vertical"
     android:padding="24dp"
     tools:context=".ui.register.RegisterActivity">
@@ -55,8 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:layout_marginTop="8dp"
-        app:boxStrokeColor="@color/blue"
-        app:hintTextColor="@color/blue"
+        app:boxStrokeColor="@color/blue_medium"
+        app:hintTextColor="@color/blue_medium"
         android:alpha="0"
         tools:alpha="100">
 
@@ -65,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name_hint"
-            android:textColorHint="@color/blue"
+            android:textColorHint="@color/blue_medium"
             android:textCursorDrawable="@null"
             android:alpha="0"
             tools:alpha="100"/>
@@ -94,8 +93,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/blue"
-            app:hintTextColor="@color/blue"
+            app:boxStrokeColor="@color/blue_medium"
+            app:hintTextColor="@color/blue_medium"
             android:alpha="0"
             tools:alpha="100">
 
@@ -105,7 +104,7 @@
                 android:layout_height="56dp"
                 android:hint="@string/hint_email"
                 android:inputType="textEmailAddress"
-                android:textColorHint="@color/blue"
+                android:textColorHint="@color/blue_medium"
                 android:textCursorDrawable="@null"
                 android:padding="16dp"
                 android:alpha="0"
@@ -140,8 +139,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:layout_marginTop="8dp"
-        app:boxStrokeColor="@color/blue"
-        app:hintTextColor="@color/blue"
+        app:boxStrokeColor="@color/blue_medium"
+        app:hintTextColor="@color/blue_medium"
         android:alpha="0"
         tools:alpha="100">
 
@@ -149,11 +148,11 @@
             android:id="@+id/ed_register_password"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:backgroundTint="@color/blue"
+            android:backgroundTint="@color/blue_medium"
             android:cursorVisible="true"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
-            android:textColorHint="@color/blue"
+            android:textColorHint="@color/blue_medium"
             android:textCursorDrawable="@null"
             android:padding="16dp"
             android:alpha="0"
@@ -166,7 +165,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/blue_medium"
         android:text="@string/register"
         android:textColor="@color/white"
         android:alpha="0"

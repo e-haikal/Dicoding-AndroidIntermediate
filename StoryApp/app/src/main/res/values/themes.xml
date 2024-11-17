@@ -4,13 +4,13 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/yellow</item>
-        <item name="colorSecondary">@color/blue</item>
-        <item name="colorPrimaryContainer">@color/yellow_light</item>
-        <item name="colorSecondaryContainer">@color/blue_dark</item>
-        <item name="colorTertiary">@color/yellow</item>
-        <item name="android:statusBarColor">@color/blue</item>
-        <item name="android:navigationBarColor">@color/blue_dark</item>
+        <item name="colorPrimary">@color/blue_medium</item>
+        <item name="colorSecondary">@color/blue_light</item>
+        <item name="colorPrimaryContainer">@color/blue_light</item>
+        <item name="colorSecondaryContainer">@color/blue_medium</item>
+        <item name="colorTertiary">@color/blue_medium</item>
+        <item name="android:statusBarColor">@color/blue_medium</item>
+        <item name="android:navigationBarColor">@color/blue_light</item>
     </style>
 
     <style name="Theme.StoryApp" parent="Base.Theme.StoryApp" />

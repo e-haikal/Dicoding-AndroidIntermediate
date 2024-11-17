@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#FF222222</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="yellow">#FBC818</color>
-    <color name="blue">#334B53</color>
-    <color name="yellow_light">#FFEDA9</color>
-    <color name="blue_dark">#1F2F35</color>
+    <color name="blue_medium">#6C56F2</color>
+    <color name="blue_light">#E2DDFC</color>
+
+<!--    #6C56F2 -> Blue primary-->
+<!--    #E2DDFC -> Blue secondary-->
 </resources>

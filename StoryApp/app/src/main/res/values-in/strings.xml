@@ -4,7 +4,7 @@
     <string name="welcome">Selamat Datang di DicodingStory</string>
     <string name="description_welcome">Bagikan ceritamu, temukan kisah menarik di sekitarmu. Ayo mulai bercerita!</string>
     <string name="started">Mulai Bercerita</string>
-    <string name="msg_login">Halo! Tinggal selangkah lagi. Silakan masuk untuk mulai menjelajah!</string>
+    <string name="msg_login">Bagikan ceritamu dengam mudah</string>
     <string name="email">Email</string>
     <string name="hint_email">Masukkan email kamu</string>
     <string name="password">Kata Sandi</string>

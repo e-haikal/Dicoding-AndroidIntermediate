@@ -1,15 +1,17 @@
 <resources>
     <string name="app_name">StoryApp</string>
-    <string name="welcome">Welcome to DicodingStory</string>
-    <string name="description_welcome">Share your story, discover fascinating tales around you. Let’s start telling stories!</string>
-    <string name="started">Start Telling Stories</string>
-    <string name="msg_login">Hey there! Just one step away. Please log in to start exploring!</string>
+    <string name="welcome">Enjoy a wide range of stories</string>
+    <string name="description_welcome">Explore a diverse range of stories. Whether it is a coding challenge or a personal journey in tech, theres always something to inspire you.</string>
+    <string name="started">Start Now!</string>
+    <string name="msg_login">Story App</string>
+    <string name="msg_description">Easily share your stories with friends with just one click..</string>
+
     <string name="email">Email</string>
-    <string name="hint_email">Enter your email</string>
+    <string name="hint_email">Enter your email address</string>
     <string name="password">Password</string>
     <string name="hint_password">Enter your password</string>
     <string name="btn_login">Login</string>
-    <string name="new_here">New here? Let’s get you set up!</string>
+    <string name="new_here">Dont have an account? make new one!</string>
     <string name="register_message">Create an account to get started!</string>
     <string name="name">Name</string>
     <string name="name_hint">Enter your name</string>
