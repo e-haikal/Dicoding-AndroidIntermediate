@@ -111,7 +111,10 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun playAnimation() {
         val img = ObjectAnimator.ofFloat(binding.imgRegister, View.ALPHA, 1f).setDuration(1000)
-        val desc = ObjectAnimator.ofFloat(binding.txtDescRegister, View.ALPHA, 1f).setDuration(1000)
+        val desc = ObjectAnimator.ofFloat(binding.tvRegisterTitle, View.ALPHA, 1f).setDuration(1000)
+
+        // Add msg_description animation
+        val msgDescription = ObjectAnimator.ofFloat(binding.msgRegisterDescription, View.ALPHA, 1f).setDuration(1000)
 
         val txtName = ObjectAnimator.ofFloat(binding.nameTextView, View.ALPHA, 1f).setDuration(1000)
         val inputName =
@@ -149,7 +152,7 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         AnimatorSet().apply {
-            playSequentially(img, desc, togetherName, togetherEmail, togetherPassword, btn, toLogin)
+            playSequentially(img, desc, msgDescription, togetherName, togetherEmail, togetherPassword, btn, toLogin)
             start()
         }
     }

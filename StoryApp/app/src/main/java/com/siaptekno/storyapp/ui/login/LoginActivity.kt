@@ -12,12 +12,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.siaptekno.storyapp.MainActivity
 import com.siaptekno.storyapp.databinding.ActivityLoginBinding
 import com.siaptekno.storyapp.pref.SessionManager
 import kotlinx.coroutines.launch
 import com.siaptekno.storyapp.R
 import com.siaptekno.storyapp.data.Result
+import com.siaptekno.storyapp.ui.main.MainActivity
 import com.siaptekno.storyapp.ui.register.RegisterActivity
 
 
@@ -121,7 +121,8 @@ class LoginActivity : AppCompatActivity() {
 
     private fun playAnimation() {
         val img = ObjectAnimator.ofFloat(binding.imgLogin, View.ALPHA, 1f).setDuration(1000)
-        val desc = ObjectAnimator.ofFloat(binding.msgLogin, View.ALPHA, 1f).setDuration(1000)
+        val title = ObjectAnimator.ofFloat(binding.msgLoginTitle, View.ALPHA, 1f).setDuration(1000)
+        val desc = ObjectAnimator.ofFloat(binding.msgLoginDescription, View.ALPHA, 1f).setDuration(1000)
 
         val txtEmail = ObjectAnimator.ofFloat(binding.emailTextView, View.ALPHA, 1f).setDuration(1000)
         val inputEmail = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(1000)
@@ -143,7 +144,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         AnimatorSet().apply {
-            playSequentially(img, desc, togetherEmail, togetherPassword, btn, toReg)
+            playSequentially(img, title, desc, togetherEmail, togetherPassword, btn, toReg)
             start()
         }
     }

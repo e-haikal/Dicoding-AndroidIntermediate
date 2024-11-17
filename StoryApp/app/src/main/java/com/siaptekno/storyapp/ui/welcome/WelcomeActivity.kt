@@ -38,14 +38,14 @@ class WelcomeActivity : AppCompatActivity() {
     private fun playAnimation() {
 
 
-        val title = ObjectAnimator.ofFloat(binding.txtWelcome, View.ALPHA, 1f).setDuration(1000)
-        val desc = ObjectAnimator.ofFloat(binding.txtDescWelcome, View.ALPHA, 1f).setDuration(1000)
+        val title = ObjectAnimator.ofFloat(binding.tvWelcomeTitle, View.ALPHA, 1f).setDuration(1000)
+        val desc = ObjectAnimator.ofFloat(binding.tvWelcomeDescription, View.ALPHA, 1f).setDuration(1000)
         val btn = ObjectAnimator.ofFloat(binding.btnStart, View.ALPHA, 1f).setDuration(1000)
         val img = ObjectAnimator.ofFloat(binding.imgWelcome, View.ALPHA, 1f).setDuration(1000)
 
 
         AnimatorSet().apply {
-            playSequentially(title, img, desc, btn)
+            playSequentially(img, title, desc, btn)
             start()
         }
     }
