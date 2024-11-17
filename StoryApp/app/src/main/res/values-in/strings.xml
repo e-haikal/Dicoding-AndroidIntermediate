@@ -8,9 +8,6 @@
     <string name="msg_description">Masuk ke akun kamu.</string>
     <string name="msg_register_title">Daftar</string>
     <string name="msg_register_description">Buat akun kamu</string>
-
-
-
     <string name="email">Email</string>
     <string name="hint_email">Masukkan email kamu</string>
     <string name="password">Kata Sandi</string>
