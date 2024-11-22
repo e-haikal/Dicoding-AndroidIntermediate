@@ -190,6 +190,6 @@ class StoryMapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     companion object {
-        private const val TAG = "MapsActivity" // Tag for logging purposes.
+        private const val TAG = "MapsActivity"
     }
 }
