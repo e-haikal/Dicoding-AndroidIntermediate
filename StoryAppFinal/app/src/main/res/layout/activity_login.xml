@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.login.LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/img_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_man_social_media"
+            android:scaleType="fitCenter"
+            android:alpha="0"
+            tools:alpha="100"
+            android:contentDescription="@string/image_login" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/msg_login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/msg_login"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:alpha="0"
+        tools:alpha="100"/>
+
+
+    <TextView
+        android:id="@+id/msg_login_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/msg_description"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:alpha="0"
+        tools:alpha="100"/>
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/email"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:alpha="0"
+        tools:alpha="100"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailEditTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/blue_medium"
+            app:hintTextColor="@color/blue_medium"
+            app:startIconDrawable="@drawable/round_email_24"
+            android:alpha="0"
+            tools:alpha="100">
+
+            <com.siaptekno.storyapp.ui.custom_view.CustomEmailEditText
+                android:id="@+id/ed_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/blue_medium"
+                android:cursorVisible="true"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/blue_medium"
+                android:textCursorDrawable="@null"
+                android:padding="16dp"
+                android:alpha="0"
+                tools:alpha="100"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/password"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:alpha="0"
+        tools:alpha="100"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PasswordEditTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        app:boxStrokeColor="@color/blue_medium"
+        app:hintTextColor="@color/blue_medium"
+        app:startIconDrawable="@drawable/round_lock_24"
+        android:alpha="0"
+        tools:alpha="100">
+
+        <com.siaptekno.storyapp.ui.custom_view.CustomPasswordEditText
+            android:id="@+id/ed_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/blue_medium"
+            android:cursorVisible="true"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/blue_medium"
+            android:textCursorDrawable="@null"
+            android:padding="16dp"
+            android:alpha="0"
+            tools:alpha="100"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/blue_medium"
+        android:text="@string/btn_login"
+        android:textColor="@color/white"
+        android:alpha="0"
+        tools:alpha="100"/>
+
+    <TextView
+        android:id="@+id/to_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="@string/new_here"
+        android:textColor="@color/blue_medium"
+        android:alpha="0"
+        tools:alpha="100"/>
+
+</LinearLayout>
