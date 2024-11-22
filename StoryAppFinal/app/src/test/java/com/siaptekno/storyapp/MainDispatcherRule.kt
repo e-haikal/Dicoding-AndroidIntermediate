@@ -9,15 +9,16 @@ import kotlinx.coroutines.test.setMain
 import org.junit.rules.TestWatcher
 import org.junit.runner.Description
 
+// JUnit rule to set and reset the main coroutine dispatcher for tests
 @ExperimentalCoroutinesApi
 class MainDispatcherRule(
-    private val testDispatcher: TestDispatcher = UnconfinedTestDispatcher()
+    private val testDispatcher: TestDispatcher = UnconfinedTestDispatcher() // Default test dispatcher
 ) : TestWatcher() {
     override fun starting(description: Description) {
-        Dispatchers.setMain(testDispatcher)
+        Dispatchers.setMain(testDispatcher) // Set the main dispatcher to the test dispatcher
     }
 
     override fun finished(description: Description) {
-        Dispatchers.resetMain()
+        Dispatchers.resetMain() // Reset the main dispatcher after tests complete
     }
 }
