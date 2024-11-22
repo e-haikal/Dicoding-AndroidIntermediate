@@ -81,24 +81,37 @@ class Repository private constructor(
     ): Result<AddStoryResponse> {
         return withContext(Dispatchers.IO) {
             try {
-                val response = apiService.addStory("Bearer $token", description, photo, lat, lon)
-                if (!response.error) Result.Success(response)
-                else Result.Error(response.message)
+                val token = "Bearer $token"
+                val response = apiService.addStory(token, description, photo, lat, lon)
+                if (!response.error) {
+                    Result.Success(response)
+                } else {
+                    Result.Error(response.message)
+                }
+            } catch (e: HttpException) {
+                Result.Error("HTTP Exception: ${e.message}")
             } catch (e: Exception) {
                 Result.Error("An error occurred: ${e.message}")
             }
         }
     }
 
+
     // Function to fetch stories with location filters
     suspend fun getStoryWithMap(token: String, location: Int): Result<List<ListStoryItem>> {
         return withContext(Dispatchers.IO) {
             try {
-                val response = apiService.getStories("Bearer $token", location = location)
-                if (!response.error) Result.Success(response.listStory)
-                else Result.Error(response.message)
+                val token = "Bearer $token"
+                val response = apiService.getStories(token, location = location)
+                if (!response.error) {
+                    Result.Success(response.listStory)
+                } else {
+                    Result.Error(response.message)
+                }
+            } catch (e: HttpException) {
+                Result.Error("Http Exception: ${e.message}")
             } catch (e: Exception) {
-                Result.Error("An error occurred: ${e.message}")
+                Result.Error("An error occured: ${e.message}")
             }
         }
     }
