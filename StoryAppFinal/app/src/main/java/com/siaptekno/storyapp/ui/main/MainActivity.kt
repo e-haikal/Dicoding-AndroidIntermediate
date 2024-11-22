@@ -18,6 +18,7 @@ import com.siaptekno.storyapp.databinding.ActivityMainBinding
 import com.siaptekno.storyapp.pref.SessionManager
 import com.siaptekno.storyapp.ui.add_story.AddStoryActivity
 import com.siaptekno.storyapp.ui.detail.DetailActivity
+import com.siaptekno.storyapp.ui.story_map.StoryMapsActivity
 import com.siaptekno.storyapp.ui.welcome.WelcomeActivity
 
 class MainActivity : AppCompatActivity() {
@@ -146,6 +147,10 @@ class MainActivity : AppCompatActivity() {
             R.id.action_localization -> {
                 // Open device localization settings
                 startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+                true
+            }
+            R.id.action_map -> {
+                startActivity(Intent(this@MainActivity, StoryMapsActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)

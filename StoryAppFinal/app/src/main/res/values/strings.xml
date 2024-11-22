@@ -44,5 +44,11 @@
     <string name="change_language">change_language</string>
     <string name="upload_story">Upload Story</string>
     <string name="detail_page">Detail Page</string>
+    <string name="title_activity_story_maps">StoryMapsActivity</string>
+    <string name="story_maps">Story Maps</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
     <string name="retry">retry</string>
 </resources>
